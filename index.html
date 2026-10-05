@@ -3,22 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Telegram Channel</title>
+    <title>Handwriting & Assignment Work Hub - Join Official Channel</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._l)f._l=1;t=b.createElement(e);t.async=!0;
+      v=b.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '916654341298252'); 
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=916654341298252&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-        body { background: #0f172a; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 16px; text-align: center; }
-        .container { background: #1e293b; border: 1px solid #334155; padding: 24px; border-radius: 12px; max-width: 400px; width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-        h1 { font-size: 20px; color: #ffb703; margin-bottom: 12px; }
-        p { font-size: 13px; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
-        .btn-tg { display: block; background: #22c55e; color: #fff; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 15px; box-shadow: 0 4px 12px rgba(34,197,94,0.3); }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --accent: #22c55e;
+            --telegram: #229ED9;
+            --dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background-color: var(--dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo span {
+            color: #38bdf8;
+        }
+        .header-btn {
+            background: var(--telegram);
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(34, 158, 217, 0.4);
+        }
+        .hero {
+            max-width: 800px;
+            margin: 40px auto 20px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .badge {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        .hero h1 span {
+            color: #38bdf8;
+        }
+        .hero p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-btn {
+            background: var(--telegram);
+            color: white;
+            padding: 18px 32px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(34, 158, 217, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            max-width: 400px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(34, 158, 217, 0.8);
+        }
+        .features-grid {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px;
+            border-radius: 16px;
+            text-align: left;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .steps-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .steps-section h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .step-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px;
+            border-radius: 16px;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+        .step-box h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .step-box p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+        }
+        .sticky-footer a {
+            width: 100%;
+            max-width: 500px;
+            padding: 14px;
+            font-size: 16px;
+        }
+        @media (min-width: 768px) {
+            .sticky-footer { display: none; }
+            .hero h1 { font-size: 40px; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 Official Telegram Channel</h1>
-        <p>Sabse tez aur authentic updates ke liye hamare official Telegram channel ko abhi join karein!</p>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            ✍️ <span>Handwriting Hub</span>
+        </div>
+        <a href="https://t.me/+DwR4ByvYhEg0Y2Q1" onclick="fbq('track', 'Lead');" class="header-btn">Join Telegram</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="badge">🚀 100% Genuine Assignments & Writing Work</div>
+        <h1>Ghar Baithe Handwriting Karke <span>Daily Income</span> Shuru Karein</h1>
+        <p>Agar aapke paas achhi handwriting hai aur aap assignments ya writing projects karke earn karna chahte hain, toh hamare official Telegram channel par judein jahan saari details aur live projects milte hain.</p>
         
-        <a href="https://t.me/+PXV9UbiytFkzYjI1" class="btn-tg">👉 Telegram Join Karein</a>
+        <a href="https://t.me/+DwR4ByvYhEg0Y2Q1" onclick="fbq('track', 'Lead');" class="cta-btn">
+            👉 Join Telegram Channel Now
+        </a>
+    </section>
+
+    <!-- Features / Benefits -->
+    <section class="features-grid">
+        <div class="feature-card">
+            <h3>⚡ Direct & Real Work</h3>
+            <p>Koi fake claims nahi. Clear instructions aur direct assignment guidelines provide ki jati hain.</p>
+        </div>
+        <div class="feature-card">
+            <h3>💰 Timely Payouts</h3>
+            <p>Kaam complete hone par secure aur fast payment options ke zariye payout milta hai.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🛡️️ Zero Registration Fee</h3>
+            <p>Channel join karne aur project ki details lene ke liye koi charges nahi hain.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="steps-section">
+        <h2>Kaam Kaise Milega? (3 Simple Steps)</h2>
+        <div class="steps-container">
+            <div class="step-box">
+                <div class="step-number">1</div>
+                <h4>Telegram Join Karein</h4>
+                <p>Upar ya niche diye gaye button par click karke hamara official channel join karein.</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">2</div>
+                <h4>Details Check Karein</h4>
+                <p>Channel par pinned messages aur latest project guidelines ko dhyan se padhein.</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">3</div>
+                <h4>Work Start Karein</h4>
+                <p>Apne comfort ke hisaab se project select karein aur earning start karein.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Secondary CTA -->
+    <div style="text-align: center; margin: 40px 20px 60px;">
+        <a href="https://t.me/+DwR4ByvYhEg0Y2Q1" onclick="fbq('track', 'Lead');" class="cta-btn">
+            👉 Abhi Telegram Join Karein
+        </a>
     </div>
+
+    <!-- Sticky Footer CTA for Mobile -->
+    <div class="sticky-footer">
+        <a href="https://t.me/+DwR4ByvYhEg0Y2Q1" onclick="fbq('track', 'Lead');" class="cta-btn">
+            👉 Join Telegram Channel
+        </a>
+    </div>
+
 </body>
 </html>
